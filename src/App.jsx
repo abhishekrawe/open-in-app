@@ -1,12 +1,19 @@
-import './App.css'
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import AppLayout from './components/AppLayout';
+import PageNotFound from './pages/PageNotFound';
+import UploadHome from './components/UploadHome';
 
-function App() {
-
+export default function App() {
   return (
-    <>
-     <h1>Hello </h1>
-    </>
-  )
-}
+    <BrowserRouter>
+      <Routes>
+        <Route element={<AppLayout />}>
+          <Route index element={<Navigate replace to='/uploadhome' />} />
+          <Route path='/uploadhome' element={<UploadHome />} />
+        </Route>
 
-export default App
+        <Route path='*' element={<PageNotFound />} />
+      </Routes>
+    </BrowserRouter>
+  );
+}
