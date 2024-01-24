@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600&family=Open+Sans:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600&family=Nunito:ital,wght@0,200;0,300;1,400&family=Open+Sans:wght@300;400;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,13 +6,13 @@
 
 @layer base {
   body {
-    @apply bg-white-10 font-figtree  ;
+    @apply bg-white-40 font-figtree  ;
   }
 }
 
 @layer utilities {
   .main-nav__link a.active {
-    @apply bg-navbar-100;
+    @apply bg-white-10;
   }
 
   .main-nav__link a.active span {
