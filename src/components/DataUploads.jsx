@@ -66,13 +66,12 @@ function DataUploads() {
                   onChange={(event) => handleTagChange(event, data.id)}
                 />
               </td>
-              <td className="px-6  flex py-4 font-figtree text-gray-lightbulma ">
+              <td className="px-6 flex py-4 font-figtree text-gray-lightbulma ">
                 {selectedTagsMap[data.id] &&
                   selectedTagsMap[data.id].map((tag, index) => (
-                    <span key={index} className="inline-flex items-center px-2 py-1 me-2 text-sm font-medium text-white-10 bg-blue-10 rounded dark:text-white-10">
-                      {tag}
-                       <LebelRemoveIcon/>
-                    </span>
+                    <div key={index} className="inline-flex items-center px-2 py-1 me-2 text-sm font-medium text-white-10 bg-blue-10 rounded dark:text-white-10" style={{ whiteSpace: 'nowrap' }}>
+                      <span className="flex">{tag}<LebelRemoveIcon /></span>
+                    </div>
                     
                   ))}
               </td>
