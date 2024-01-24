@@ -4,12 +4,14 @@ export default {
   theme: {
     fontFamily: {
       figtree: ["Figtree"],
+      nunito: ["Nunito"],
     },
     colors: {
       white: {
         10: "rgb(250, 250, 251)",
         20: "rgba(255, 255, 255, 1)",
         30: "rgb(245, 245, 245)",
+        40: "rgba(235, 235, 235, 1)",
       },
       blue: {
         10: "rgba(96, 91, 255, 1)",
@@ -18,18 +20,28 @@ export default {
       gray: {
         text: "rgba(154, 154, 169, 1)",
         lighttext: "rgba(153, 156, 160, 1)",
+        dashed: "rgba(235, 235, 235, 1)",
       },
       remove: {
         remove: "rgba(211, 48, 48, 1)",
       },
+      // navbar: {
+      //   background:
+      //     "linear-gradient(90deg, #ACA9FF 0%, rgba(172, 169, 255, 0.00) 91.25%)",
+      // },
       navbar: {
-        background: 'linear-gradient(90deg, #ACA9FF 0%, rgba(172, 169, 255, 0.00) 91.25%)',
-      }
+        secondary: "rgba(30, 38, 64, 1)",
+        100: "rgba(255, 255, 255, 0.1)",
+        200: "rgba(53, 60, 83, 1)",
+      },
     },
     extend: {
       screens: {
         tablet: "960px",
         desktop: "1248px",
+        backgroundColor: {
+          "light-gohan": "var(--Light-Gohan, #FFF)",
+        },
       },
     },
   },
