@@ -12,23 +12,25 @@ export default {
         20: "rgba(255, 255, 255, 1)",
         30: "rgb(245, 245, 245)",
         40: "rgba(235, 235, 235, 1)",
+        50: "rgba(242, 242, 242, 1)",
       },
       blue: {
         10: "rgba(96, 91, 255, 1)",
         20: "rgba(91, 147, 255, 1)",
       },
+      black: {
+        10: "rgba(35, 31, 32, 1)",
+      },
       gray: {
         text: "rgba(154, 154, 169, 1)",
         lighttext: "rgba(153, 156, 160, 1)",
         dashed: "rgba(235, 235, 235, 1)",
+        lightbulma: "var(--Light-Bulma, #231F20)",
+        drop: "rgba(213, 216, 221, 1)",
       },
       remove: {
         remove: "rgba(211, 48, 48, 1)",
       },
-      // navbar: {
-      //   background:
-      //     "linear-gradient(90deg, #ACA9FF 0%, rgba(172, 169, 255, 0.00) 91.25%)",
-      // },
       navbar: {
         secondary: "rgba(30, 38, 64, 1)",
         100: "rgba(255, 255, 255, 0.1)",

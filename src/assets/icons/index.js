@@ -12,6 +12,7 @@ import { SettingsIcon } from "./SettingsIcon";
 import { UploadIcon } from "./UploadIcon";
 import { MenuOpenIcon } from "./MenuOpenIcon";
 import { MenuCloseIcon } from "./MenuCloseIcon";
+import { ChevronDownIcon } from "./ChevronDownIcon";
 
 export {
   BaseLogoIcon,
@@ -27,5 +28,6 @@ export {
   ScheduleIcon,
   SettingsIcon,
   UploadIcon,
-  MenuCloseIcon
+  MenuCloseIcon,
+  ChevronDownIcon
 };
