@@ -10,6 +10,8 @@ import { NotificationIcon } from "./NotificationIcon";
 import { ScheduleIcon } from "./ScheduleIcon";
 import { SettingsIcon } from "./SettingsIcon";
 import { UploadIcon } from "./UploadIcon";
+import { MenuOpenIcon } from "./MenuOpenIcon";
+import { MenuCloseIcon } from "./MenuCloseIcon";
 
 export {
   BaseLogoIcon,
@@ -18,10 +20,12 @@ export {
   ControlsIcon,
   DashboardIcon,
   ExcelIcon,
+  MenuOpenIcon,
   InvoiceIcon,
   LebelRemoveIcon,
   NotificationIcon,
   ScheduleIcon,
   SettingsIcon,
   UploadIcon,
+  MenuCloseIcon
 };
