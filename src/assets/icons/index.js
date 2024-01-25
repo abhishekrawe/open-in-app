@@ -14,7 +14,13 @@ import { MenuOpenIcon } from "./MenuOpenIcon";
 import { MenuCloseIcon } from "./MenuCloseIcon";
 import { ChevronDownIcon } from "./ChevronDownIcon";
 import { SpinnerIcon } from "./SpinnerIcon";
-import { DocUploadIcon} from "./DocUploadIcon"
+import { DocUploadIcon} from "./DocUploadIcon";
+import { DiscordIcon} from "./DiscordIcon";
+import {GoogleIcon} from "./GoogleIcon";
+import {LinkedInIcon} from "./LinkedInIcon";
+import {GithubIcon} from "./GithubIcon";
+import { AppleIcon} from "./AppleIcon";
+import { TwitterIcon} from './TwitterIcon';
 
 export {
   BaseLogoIcon,
@@ -33,5 +39,11 @@ export {
   MenuCloseIcon,
   ChevronDownIcon,
   SpinnerIcon,
-  DocUploadIcon
+  DocUploadIcon,
+  TwitterIcon,
+  DiscordIcon,
+  LinkedInIcon,
+  GoogleIcon,
+  GithubIcon,
+  AppleIcon
 };
