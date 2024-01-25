@@ -41,56 +41,62 @@ function UploadCsv() {
     };
 
     return (
-        <div
-            className="flex justify-center items-center"
-            onDrop={handleDrop}
-            onDragOver={handleDragOver}
-        >
-            <div className="box-content h-auto sm:w-11/12 md:w-2/5 p-4 rounded-xl bg-white-20">
-                <label
-                    htmlFor="fileInput"
-                    className="border-dashed border-2 h-60 text-gray-dashed rounded-xl flex flex-col justify-center items-center cursor-pointer"
-                >
-                    <input
-                        type="file"
-                        id="fileInput"
-                        ref={fileInputRef}
-                        style={{ display: "none" }}
-                        onChange={(e) => handleFileUpload(e.target.files[0])}
-                    />
-                    <ExcelIcon />
-                    <h1 className="text-center">
-                        {selectedFile ? (
-                            <>
-                                <span className="text-blue-10">{selectedFile.name}</span>
-                                <p
-                                    className="text-red-remove cursor-pointer"
-                                    onClick={handleRemoveFile}
-                                >
-                                    Remove
-                                </p>
-                            </>
+        <>
+            <div className='visible md:invisible md:flex items-center pb-5 '>
+                <span className='text-black-10 text-2xl font-medium font-figtree leading-8'>Uploads CSV</span>
+            </div>
+            <div
+                className="flex justify-center items-center"
+                onDrop={handleDrop}
+                onDragOver={handleDragOver}
+            >
+                <div className="box-content h-auto w-full md:w-1/2 p-4 rounded-xl bg-white-20">
+                    <label
+                        htmlFor="fileInput"
+                        className="border-dashed border-2 h-60 text-gray-dashed rounded-xl flex flex-col justify-center items-center cursor-pointer"
+                    >
+                        <input
+                            type="file"
+                            id="fileInput"
+                            ref={fileInputRef}
+                            style={{ display: "none" }}
+                            onChange={(e) => handleFileUpload(e.target.files[0])}
+                        />
+                        <ExcelIcon />
+                        <h1 className="text-center">
+                            {selectedFile ? (
+                                <>
+                                    <span className="text-blue-10">{selectedFile.name}</span>
+                                    <p
+                                        className="text-red-remove cursor-pointer"
+                                        onClick={handleRemoveFile}
+                                    >
+                                        Remove
+                                    </p>
+                                </>
+                            ) : (
+                                <>
+                                    Drop your excel sheet here or{" "}
+                                    <span className="text-blue-10"> browse</span>
+                                </>
+                            )}
+                        </h1>
+                    </label>
+                    <div
+                        className={`justify-center gap-2 flex items-center rounded-md p-2 mt-3 text-white-10 bg-blue-10 cursor-pointer ${isUploadComplete ? "opacity-45" : ""}`}
+                        onClick={handleOnClick}
+                    >
+                        {isLoading ? (
+                            <SpinnerIcon />
                         ) : (
-                            <>
-                                Drop your excel sheet here or{" "}
-                                <span className="text-blue-10"> browse</span>
-                            </>
+                            <DocUploadIcon />
                         )}
-                    </h1>
-                </label>
-                <div
-                    className={`justify-center gap-2 flex items-center rounded-md p-2 mt-3 text-white-10 bg-blue-10 cursor-pointer ${isUploadComplete ? "opacity-45" : ""}`}
-                    onClick={handleOnClick}
-                >
-                    {isLoading ? (
-                        <SpinnerIcon />
-                    ) : (
-                        <DocUploadIcon />
-                    )}
-                    Upload
+                        Upload
+                    </div>
                 </div>
             </div>
-        </div>
+        </>
+       
     );
 }
 
