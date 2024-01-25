@@ -24,8 +24,8 @@ function DataUploads() {
   
   return (
     <div className='rounded-3xl'>
-      <div className='hidden md:flex items-center py-5 '>
-        <span className='text-black-12 text-xl font-medium'>Uploads</span>
+      <div className='md:flex items-center py-5 '>
+        <span className='text-black-10 text-2xl font-medium font-figtree leading-8'>Uploads</span>
       </div>
       <table className="w-full text-sm text-left bg-white-30 rounded-lg p">
         <thead className="text-md">
@@ -70,7 +70,7 @@ function DataUploads() {
                 {selectedTagsMap[data.id] &&
                   selectedTagsMap[data.id].map((tag, index) => (
                     <div key={index} className="inline-flex items-center px-2 py-1 me-2 text-sm font-medium text-white-10 bg-blue-10 rounded dark:text-white-10" style={{ whiteSpace: 'nowrap' }}>
-                      <span className="flex">{tag}<LebelRemoveIcon /></span>
+                      {tag}<LebelRemoveIcon />
                     </div>
                     
                   ))}

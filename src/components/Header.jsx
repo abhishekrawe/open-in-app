@@ -27,16 +27,16 @@ export default function Header({ setMobileMenuOpen }) {
 
                 {/* Visible on larger screens */}
                 <div className='hidden md:flex items-center gap-3'>
-                    <span className='text-black-12 text-xl font-medium'>Upload CSV</span>
+                    <span className='text-black-10 text-2xl font-medium font-figtree leading-8'>Upload CSV</span>
                 </div>
 
                 {/* Visible on mobile screens */}
-                <div className='flex gap-3 items-center w-[192px] md:hidden'>
+                <div className='flex gap-3 items-center w-[150px] md:hidden'>
                     <div className='w-12 h-12 rounded bg-black-100 overflow-hidden'>
                         <BaseLogoIcon />
                     </div>
                     <div className='flex flex-col gap-1 grow items-start'>
-                        <span className='text-[15px] font-medium leading-[22px]'>
+                        <span className='text-blue-30 font-nunito font-semibold text-2xl'>
                             Base
                         </span>
                     </div>

@@ -16,18 +16,18 @@
   }
 
   .main-nav__link a.active span {
-    @apply opacity-20;
+    @apply opacity-80;
   }
 
   .main-nav__link svg {
-    @apply w-5 h-5 opacity-20 transition-all;
+    @apply w-5 h-5 opacity-80 transition-all;
   }
 
   .main-nav__link a:hover svg {
-    @apply opacity-20;
+    @apply opacity-80;
   }
 
   .main-nav__link a.active svg {
-    @apply opacity-20;
+    @apply opacity-80;
   }
 }
