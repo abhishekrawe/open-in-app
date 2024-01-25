@@ -28,7 +28,7 @@ export default {
         lightbulma: "var(--Light-Bulma, #231F20)",
         drop: "rgba(213, 216, 221, 1)",
       },
-      remove: {
+      red: {
         remove: "rgba(211, 48, 48, 1)",
       },
       navbar: {

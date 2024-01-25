@@ -13,6 +13,8 @@ import { UploadIcon } from "./UploadIcon";
 import { MenuOpenIcon } from "./MenuOpenIcon";
 import { MenuCloseIcon } from "./MenuCloseIcon";
 import { ChevronDownIcon } from "./ChevronDownIcon";
+import { SpinnerIcon } from "./SpinnerIcon";
+import { DocUploadIcon} from "./DocUploadIcon"
 
 export {
   BaseLogoIcon,
@@ -29,5 +31,7 @@ export {
   SettingsIcon,
   UploadIcon,
   MenuCloseIcon,
-  ChevronDownIcon
+  ChevronDownIcon,
+  SpinnerIcon,
+  DocUploadIcon
 };
