@@ -28,6 +28,8 @@ export default {
         dashed: "rgba(235, 235, 235, 1)",
         lightbulma: "var(--Light-Bulma, #231F20)",
         drop: "rgba(213, 216, 221, 1)",
+        signin: "rgba(248, 250, 255, 1)",
+        signintext: "rgba(rgba(133, 133, 133, 1)",
       },
       red: {
         remove: "rgba(211, 48, 48, 1)",

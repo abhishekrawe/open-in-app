@@ -21,6 +21,11 @@ import {LinkedInIcon} from "./LinkedInIcon";
 import {GithubIcon} from "./GithubIcon";
 import { AppleIcon} from "./AppleIcon";
 import { TwitterIcon} from './TwitterIcon';
+import { BaseSignLogo } from "./BaseSignLogo";
+import  {GitMobile} from "./GitMobile";
+import {DiscordMobile} from "./DiscordMobile";
+import { LinkedinMobile} from "./LinkedinMobile";
+import {TweetMobile} from "./TweetMobile";
 
 export {
   BaseLogoIcon,
@@ -45,5 +50,10 @@ export {
   LinkedInIcon,
   GoogleIcon,
   GithubIcon,
-  AppleIcon
+  AppleIcon,
+  BaseSignLogo,
+  GitMobile,
+  LinkedinMobile,
+  TweetMobile,
+  DiscordMobile
 };
