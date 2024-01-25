@@ -2,6 +2,7 @@ import { Outlet } from 'react-router-dom';
 import Sidebar from './Sidebar';
 import Header from './Header';
 import { useState } from 'react';
+import UploadHome from './UploadHome';
 
 export default function AppLayout() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -14,9 +15,9 @@ export default function AppLayout() {
                 setMobileMenuOpen={setMobileMenuOpen}
             />
 
-            <main className='flex-1 overflow-y-auto p-4 tablet:p-8'>
+            <main className='flex-1 p-4 tablet:p-8'>
                 <div className='mx-auto'>
-                    <Outlet />
+                    <UploadHome/>
                 </div>
             </main>
         </div>

@@ -1,12 +1,13 @@
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import {
     MenuOpenIcon,
     BaseLogoIcon,
-    BellIcon
+    BellIcon,
 } from '../assets/icons';
 import { useEffect, useState } from 'react';
 
 export default function Header({ setMobileMenuOpen }) {
+    const navigate = useNavigate();
     const [pageName, setPageName] = useState('');
     const location = useLocation();
 
@@ -15,6 +16,11 @@ export default function Header({ setMobileMenuOpen }) {
         setPageName(pagePath[1] || 'Home');
     }, [location.pathname]);
 
+    const handleLogout = () => {
+        localStorage.removeItem("email");
+        navigate('/signin');
+
+    }
     return (
         <header className='w-full grid grid-cols-[1fr_auto]  items-center py-3 px-4 tablet:px-8 gap-4'>
             <div className='flex items-center gap-2 tablet:gap-4'>
@@ -43,8 +49,9 @@ export default function Header({ setMobileMenuOpen }) {
                 </div>
             </div>
             <div className='flex items-center justify-end tablet:gap-6 text-black-30 gap-4 '>
-               <BellIcon/>
-               <img src="/mask.png" alt='mask' className='w-8 h-8 rounded-full' />
+                <BellIcon />
+                <img src="/mask.png" alt='mask' className='w-8 h-8 rounded-full' />
+                <img src="/logout.svg" alt="logout" className='h-6 w-6' onClick={handleLogout} />
             </div>
         </header>
     );
