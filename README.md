@@ -15,16 +15,22 @@ Access the deployed app at [https://candid-sprite-c800d2.netlify.app/](https://c
 ## 🃏 Glimse of Project ⏬
 
 ### `video ` 
-https://github.com/abhishekrawe/open-in-app/assets/65603830/4d82ffd0-b87d-4530-9c86-22fcd2c825a3
+
+https://github.com/abhishekrawe/open-in-app/assets/65603830/cc7ae4e1-6624-4538-ad90-be45f4effbeb
+
+### `pictures`
+
+<p float="left">
+  <img src="https://github.com/abhishekrawe/open-in-app/assets/65603830/22d9bf03-270b-4e0a-9c27-b4f4dea0dded" width="220" />
+  <img src="https://github.com/abhishekrawe/open-in-app/assets/65603830/39e8e59a-b7f3-4103-96bb-f1009c643002" width="220" /> 
+  <img src="https://github.com/abhishekrawe/open-in-app/assets/65603830/06e06c3e-457d-4d65-843c-221c59e55e78" width="220" />
+  <img src="https://github.com/abhishekrawe/open-in-app/assets/65603830/5b3aa732-f83f-4b28-be65-911efc172a7d" width="220" />
+</p>
 
 ![image](https://github.com/abhishekrawe/open-in-app/assets/65603830/795ada9c-a370-45d4-a9f6-261a1ee3b04f)
 ![image](https://github.com/abhishekrawe/open-in-app/assets/65603830/fc87dfe2-ecb0-4203-b66d-9e7ef9874aa4)
-![image](https://github.com/abhishekrawe/open-in-app/assets/65603830/c91b128d-7849-461a-81de-37ebbf55bed4)
 ![image](https://github.com/abhishekrawe/open-in-app/assets/65603830/ded35a84-b7d9-4307-ad32-641197a35b56)
 ![image](https://github.com/abhishekrawe/open-in-app/assets/65603830/36fe2ad5-54b7-4852-a2f1-3a3cdf8f1c96)
-
-
-
 
 
 
