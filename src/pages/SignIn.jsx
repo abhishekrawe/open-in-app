@@ -90,7 +90,7 @@ function Singin() {
       <div className="hidden md:flex md:flex-col md:min-w-[50%]  md:justify-between">
         <img src={bg} className="fixed" />
         <div className="flex flex-col h-full justify-between z-10 px-20 py-10">
-          <BaseSignLogo />
+          <img src="Subtract.svg" className="w-20 h-20" alt="logo"/>
           <div className="ml-20">
             <h1 className="text-6xl text-white-10 font-bold font-montserrat ">
               BASE
