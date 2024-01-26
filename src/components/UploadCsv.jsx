@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState , useEffect } from "react";
 import { ExcelIcon, DocUploadIcon, SpinnerIcon } from "../assets/icons";
 import Papa from 'papaparse';
 import DataUploads from "./DataUploads";
@@ -8,6 +8,7 @@ function UploadCsv() {
   const [data, setData] = useState([]);
   const [selectedFile, setSelectedFile] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [finished, setFinished] = useState(false);
 
   const handleFileUpload = (file) => {
     setSelectedFile(file);
@@ -19,6 +20,7 @@ function UploadCsv() {
         setData(results.data);
         setTimeout(() => {
           setLoading(false);
+          setFinished(true);
         }, 1000);
       },
     });
@@ -55,6 +57,12 @@ function UploadCsv() {
   const handleDragOver = (e) => {
     e.preventDefault();
   };
+
+  useEffect(() => {
+    if (finished) {
+      document.getElementById('uploadButton').style.opacity = 0.4;
+    }
+  }, [finished]);
 
   return (
     <>
@@ -102,6 +110,7 @@ function UploadCsv() {
             </h1>
           </label>
           <div
+            id="uploadButton"
             className={`justify-center gap-2 flex items-center rounded-md p-2 mt-3 text-white-10 bg-blue-10 cursor-pointer`}
             onClick={handleUploadButtonClick}
           >
