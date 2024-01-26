@@ -14,8 +14,8 @@ function TagSelector({ tags, value, onChange }) {
       >
         <option disabled value='default' className="text-black-10">Select Tags</option>
         {tags.map((tag, index) => (
-          <option key={index} className="text-black-10 py-5" value={tag.value}>
-            {tag.label}
+          <option key={index} className="text-black-10 py-5" value={tag}>
+            {tag}
           </option>
         ))}
       </select>
@@ -24,3 +24,4 @@ function TagSelector({ tags, value, onChange }) {
 }
 
 export default TagSelector;
+
