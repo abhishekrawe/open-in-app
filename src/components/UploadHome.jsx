@@ -6,7 +6,6 @@ function UploadHome() {
   return (
     <>
       <UploadCsv />
-      <DataUploads />
     </>
   )
 }
