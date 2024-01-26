@@ -8,7 +8,7 @@ Access the deployed app at [https://candid-sprite-c800d2.netlify.app/](https://c
 
 ## ✨ Run on your Local
 - ⬇️ For Running this repository on a local 
-- ⬇️ Frontend - cd to not-an-average-food-app  > npm install > npm run dev
+- ⬇️ Frontend - cd to open-in-app  > npm install > npm run dev
  
 
 
