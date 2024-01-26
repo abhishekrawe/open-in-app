@@ -58,34 +58,37 @@ function DataUploads({ data }) {
             </div>
 
             {data.map((row, index) => (
-              <div key={index} className="flex md:bg-white-20 max-w-screen rounded-md text-base font-figtree mb-2 p-2 w-full ">
-                <div className="flex-none font-medium text-gray-lightbulma me-4 p-2 pe-12 rounded">
+              <div key={index} className="flex md:bg-white-20 max-w-screen rounded-md text-base font-figtree mb-2 p-2 w-full">
+                <div className="flex-none font-medium text-gray-lightbulma me-4 p-2 pe-12 rounded pt-4">
                   {row.id}
                 </div>
-                <div className=" whitespace-nowrap flex-none text-blue-20 underline p-2 px-5 w-3/5 md:w-1/4 bg-white-20 rounded-tl-md rounded-bl-md">
+                <div className=" whitespace-nowrap flex-none text-blue-20 underline p-2 px-5 w-3/5 md:w-1/4 bg-white-20 rounded-tl-md rounded-bl-md pt-4">
                   {row.links}
                 </div>
-                <div className="flex-none font-figtree text-gray-lightbulma p-2 w-3/5 px-5 md:w-1/4 bg-white-20">
+                <div className="flex-none font-figtree text-gray-lightbulma p-2 w-3/5 px-5 md:w-1/4 bg-white-20 pt-4">
                   {row.prefix}
                 </div>
 
-                <TagSelector
-                  className="bg-white-20"
-                  tags={row['select tags'].split(',').map((tag) => tag.trim())}
-                  value={selectedTagsMap[row.id] || 'default'}
-                  onChange={(event) => handleTagChange(event, row.id)}
-                />
-                {selectedTagsMap[row.id] &&
-                  selectedTagsMap[row.id].map((tag, index) => (
-                    <div key={index} className="flex-none inline-flex items-center px-2 mx-2 text-sm font-medium text-white-10 bg-blue-10 my-3 rounded">
-                      {tag}
-                      <button type="button" className="inline-flex items-center p-1 ms-2 text-sm text-pink-400 bg-transparent rounded-sm hover:bg-pink-200 hover:text-pink-900 dark:hover:bg-pink-800 dark:hover:text-pink-300" data-dismiss-target="#badge-dismiss-pink" onClick={() => handleBadgeDismiss(row.id, index)} aria-label="Remove">
-                        <svg className="w-2 h-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
-                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
-                        </svg>
-                      </button>
-                    </div>
-                  ))}
+                <div className="flex max-w-screen-2xl font-figtree bg-white-20 rounded-tr-md rounded-br-md">
+                  <TagSelector
+                    className="bg-white-20"
+                    tags={row['select tags'].split(',').map((tag) => tag.trim())}
+                    value={selectedTagsMap[row.id] || 'default'}
+                    onChange={(event) => handleTagChange(event, row.id)}
+                  />
+                  {selectedTagsMap[row.id] &&
+                    selectedTagsMap[row.id].map((tag, index) => (
+                      <div key={index} className="flex-none inline-flex items-center px-2 mx-2 text-sm font-medium text-white-10 bg-blue-10 my-3 rounded">
+                        {tag}
+                        <button type="button" className="inline-flex items-center p-1 ms-2 text-sm text-pink-400 bg-transparent rounded-sm hover:bg-pink-200 hover:text-pink-900 dark:hover:bg-pink-800 dark:hover:text-pink-300" data-dismiss-target="#badge-dismiss-pink" onClick={() => handleBadgeDismiss(row.id, index)} aria-label="Remove">
+                          <svg className="w-2 h-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                          </svg>
+                        </button>
+                      </div>
+                    ))}
+                </div>
+                
               </div>
             ))}
           </div>

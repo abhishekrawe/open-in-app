@@ -12,7 +12,7 @@ export default function PageNotFound() {
                     Sorry, we couldnt find the page youre looking for.
                 </p>
                 <Link
-                    to='/'
+                    to='/uploadcsv'
                     className='mt-10 flex items-center justify-center py-[6px] px-4 rounded-[40px] bg-black-90 text-sm font-medium cursor-pointer hover:bg-blue-primary text-black-50 hover:text-black-100 transition-all'
                 >
                     <span>Back to home</span>

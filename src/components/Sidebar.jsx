@@ -38,7 +38,7 @@ export default function Sidebar({ mobileMenuOpen, setMobileMenuOpen }) {
               <Navbar setMobileMenuOpen={setMobileMenuOpen} />
               <div
                 onClick={() => setMobileMenuOpen(false)}
-                className='absolute top-[10px] left-[160px] bg-black-100 text-black-12 rounded-full p-2 z-50 shadow-sm'
+                className='absolute top-[10px] left-[160px] bg-black-100 text-black-12 rounded-full p-2 z-50'
               >
                 <MenuCloseIcon width={20} height={20} />
               </div>
