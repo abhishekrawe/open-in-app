@@ -22,7 +22,7 @@ function DataUploads({ data }) {
 
   return (
     <>
-       <div className="p-5">
+       <div className="p-4">
         <div className='md:flex items-center '>
           <div className='text-black-10 text-2xl font-medium font-figtree leading-8'>Uploads</div>
         </div>
