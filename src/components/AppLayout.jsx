@@ -8,18 +8,24 @@ export default function AppLayout() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     return (
-        <div className='grid h-screen grid-cols-1 tablet:grid-cols-[224px_minmax(300px,_1fr)] grid-rows-[auto_minmax(300px,_1fr)]'>
-            <Header setMobileMenuOpen={setMobileMenuOpen} />
+        <div className='flex h-screen overflow-hidden'>
+            {/* Sidebar */}
             <Sidebar
                 mobileMenuOpen={mobileMenuOpen}
                 setMobileMenuOpen={setMobileMenuOpen}
             />
 
-            <main className='flex-1 p-4 tablet:p-8'>
-                <div className='mx-auto'>
-                    <UploadCsv/>
-                </div>
-            </main>
+            <div className='flex flex-col flex-1 overflow-hidden'>
+                {/* Header */}
+                <Header setMobileMenuOpen={setMobileMenuOpen} />
+
+                {/* Main Content */}
+                <main className='flex-1 p-4 tablet:p-8 overflow-y-auto'>
+                    <div className='mx-auto'>
+                        <UploadCsv />
+                    </div>
+                </main>
+            </div>
         </div>
     );
 }
