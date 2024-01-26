@@ -5,6 +5,9 @@ export default {
     fontFamily: {
       figtree: ["Figtree"],
       nunito: ["Nunito"],
+      montserrat: ["Montserrat"],
+      lato:["Lato"]
+
     },
     colors: {
       white: {

@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600&family=Nunito:ital,wght@0,200;0,300;1,400&family=Open+Sans:wght@300;400;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600&family=Lato:wght@300;400&family=Montserrat:wght@100;300;400;500&family=Nunito:ital,wght@0,200;0,300;1,400&family=Open+Sans:wght@300;400;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -16,18 +15,6 @@
   }
 
   .main-nav__link a.active span {
-    @apply opacity-80;
-  }
-
-  .main-nav__link svg {
-    @apply w-5 h-5 opacity-80 transition-all;
-  }
-
-  .main-nav__link a:hover svg {
-    @apply opacity-80;
-  }
-
-  .main-nav__link a.active svg {
     @apply opacity-80;
   }
 }
