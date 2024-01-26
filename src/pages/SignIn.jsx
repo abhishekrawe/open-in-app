@@ -100,18 +100,18 @@ function Singin() {
             <div className="flex ">{socialArray}</div>
           </div>
         </div>
-        <div className="flex flex-col  md:min-w-[50%] px-8 m-auto items-start justify-center">
+        <div className="flex flex-col  md:min-w-[50%] m-auto items-start justify-center">
           <div>
             <h1 className="text-4xl font-bold my-2 font-montserrat  ">Sign In</h1>
             <p className="my-2 font-lato">Sign in to your account</p>
           </div>
 
           {/* Quick Sign In */}
-          <div className="flex  mt-3 gap-2 md:gap-7">
+          <div className="flex  mt-3 gap-2 md:gap-10">
             <div>
                 <button
                   type="button"
-                  className="flex items-center font-montserrat bg-white-20 justify-center text-gray-signintext px-4 md:px-7 py-3 text-xs rounded-md gap-2"
+                  className="flex items-center font-montserrat bg-white-20 justify-center text-gray-signintext px-4 md:px-10 py-3 text-xs rounded-md gap-2"
                   onClick={handleClick}
                 >
                   <GoogleIcon className="mr-2 text-center w-5 h-5" />
@@ -120,7 +120,7 @@ function Singin() {
             </div>
             <button
               type="button"
-              className="flex  font-montserrat font-light items-center bg-white px-4 md:px-7 py-3 text-xs bg-white-20 rounded-md gap-2"
+              className="flex  font-montserrat font-light items-center bg-white px-4 md:px-10 py-3 text-xs bg-white-20 rounded-md gap-2"
             >
               <AppleIcon className="mr-2 text-center w-5 h-5" />
               <h1 className="text-[#858585]  whitespace-nowrap">Sign in with Apple</h1>
@@ -166,7 +166,7 @@ function Singin() {
             </form>
           </div>
 
-          <div className="flex visible md:invisible ml-12">
+          <div className="flex visible md:invisible ml-16">
             <div className="flex ">{socialMobile}</div>
           </div>
         </div>

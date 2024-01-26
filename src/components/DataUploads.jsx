@@ -50,7 +50,7 @@ function DataUploads({ data }) {
           <div className="overflow-x-auto">
             <div className="flex rounded-md text-base font-figtree mb-2 p-3">
               {columns.map((column, index) => (
-                <div key={index} className={`flex-none font-medium text-gray-lightbulma p-2 px-3 ${index === 0 ? 'pe-12' : ''} ${index === 0 ? '' : 'w-3/5 md:w-1/4 me-4 '}`}>
+                <div key={index} className={`flex-none text-gray-lightbulma figtree-font text-lg font-semibold leading-6 p-2 px-3 ${index === 0 ? 'pe-12' : ''} ${index === 0 ? '' : 'w-3/5 md:w-1/4 me-4 '}`}>
                   {column}
                 </div>
               ))}
