@@ -113,7 +113,7 @@ function Singin() {
         </div>
 
         {/* Quick Sign In */}
-        <div className="flex  mt-3 gap-2 md:gap-10">
+        <div className="flex  mt-3 gap-2 md:gap-10 ml-6 md:ml-0">
           <div>
             <button
               type="button"
