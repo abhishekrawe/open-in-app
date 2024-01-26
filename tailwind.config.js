@@ -44,9 +44,12 @@ export default {
       screens: {
         tablet: "960px",
         desktop: "1248px",
-        backgroundColor: {
-          "light-gohan": "var(--Light-Gohan, #FFF)",
-        },
+      },
+      width: {
+        "1/4": "22%",
+      },
+      backgroundColor: {
+        "light-gohan": "var(--Light-Gohan, #FFF)",
       },
     },
   },
