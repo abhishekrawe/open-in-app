@@ -79,7 +79,7 @@ function UploadCsv() {
             />
             <ExcelIcon />
             <h1 className="text-center">
-              {selectedFile ? (
+              {!loading && selectedFile ? (
                 <>
                   <span className="text-blue-10">{selectedFile.name}</span>
                   <p
@@ -91,8 +91,12 @@ function UploadCsv() {
                 </>
               ) : (
                 <>
-                  Drop your excel sheet here or{" "}
-                  <span className="text-blue-10"> browse</span>
+                  {!loading && (
+                    <>
+                      Drop your excel sheet here or{" "}
+                      <span className="text-blue-10"> browse</span>
+                    </>
+                  )}
                 </>
               )}
             </h1>
@@ -101,13 +105,18 @@ function UploadCsv() {
             className={`justify-center gap-2 flex items-center rounded-md p-2 mt-3 text-white-10 bg-blue-10 cursor-pointer`}
             onClick={handleUploadButtonClick}
           >
-            <DocUploadIcon />
-            Upload
-            {loading && <SpinnerIcon />}
+            {!loading ? (
+              <>
+                <DocUploadIcon />
+                Upload
+              </>
+            ) : (
+              <SpinnerIcon />
+            )}
           </div>
         </div>
       </div>
-      <DataUploads data={data} />
+      {!loading && <DataUploads data={data} />}
     </>
   );
 }
