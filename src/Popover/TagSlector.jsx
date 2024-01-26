@@ -3,14 +3,12 @@ import { ChevronDownIcon } from "../assets/icons";
 
 function TagSelector({ tags, value, onChange }) {
   return (
-    <div className='relative text-gray-drop'>
-      <div className='pointer-events-none absolute inset-y-0 right-0 flex items-center md:mr-36 lg:mr-36 xl:mr-36'>
-        <ChevronDownIcon width={16} height={16} />
-      </div>
+    <div className='relative text-gray-drop bg-white-20'>
+     
       <select
         value={value}
         onChange={onChange}
-        className='appearance-none h-9 rounded border text-base cursor-pointer py-[6px] px-[24px] pr-20 outline-none'
+        className='appearance-none h-9 rounded border text-base cursor-pointer py-4 px-16 pr-20 outline-none bg-white-20'
       >
         <option disabled value='default' className="text-black-10">Select Tags</option>
         {tags.map((tag, index) => (
@@ -19,6 +17,9 @@ function TagSelector({ tags, value, onChange }) {
           </option>
         ))}
       </select>
+      <div className='pointer-events-none absolute inset-y-0 right-0 flex items-center mr-3 mt-3'>
+        <ChevronDownIcon width={16} height={16} />
+      </div>
     </div>
   );
 }

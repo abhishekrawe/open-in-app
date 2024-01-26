@@ -31,7 +31,7 @@ function DataUploads({ data }) {
           <div className="overflow-x-auto">
             <div className="flex rounded-md text-base font-figtree mb-2 p-3">
               {columns.map((column, index) => (
-                <div key={index} className={`flex-none font-medium text-gray-lightbulma p-2 ${index === 0 ? 'pe-12' : ''} ${index === 0 ? '' : 'w-80'}`}>
+                <div key={index} className={`flex-none font-medium text-gray-lightbulma p-2 ${index === 0 ? 'pe-12' : ''} ${index === 0 ? '' : 'w-3/5 md:w-1/4 me-4 '}`}>
                   {column}
                 </div>
               ))}
@@ -39,19 +39,26 @@ function DataUploads({ data }) {
             </div>
 
             {data.map((row, index) => (
-              <div key={index} className="flex bg-white-20 rounded-md text-base font-figtree mb-2 p-5 w-full ">
-                <div className="flex-none font-medium text-gray-lightbulma me-4 p-2 pe-12 ">{row.id}</div>
-                <div className="flex-none text-blue-20 underline p-2 w-3/5 md:w-1/4">{row.links}</div>
-                <div className="flex-none font-figtree text-gray-lightbulma p-2 w-3/5 md:w-1/4">{row.prefix}</div>
+              <div key={index} className="flex md:bg-white-20 max-w-screen rounded-md text-base font-figtree mb-2 p-5 w-full ">
+                <div className="flex-none font-medium text-gray-lightbulma me-4 p-2 pe-12 rounded">
+                  {row.id}
+                </div>
+                <div className="flex-none text-blue-20 underline p-2 w-3/5 md:w-1/4 bg-white-20 py-4 rounded">
+                  {row.links}
+                </div>
+                <div className="flex-none font-figtree text-gray-lightbulma p-2 w-3/5 md:w-1/4 bg-white-20 py-4  rounded">
+                  {row.prefix}
+                </div>
 
                 <TagSelector
                   tags={row['select tags'].split(',').map((tag) => tag.trim())}
                   value={selectedTagsMap[row.id] || 'default'}
+                  className="bg-white-20 "
                   onChange={(event) => handleTagChange(event, row.id)}
                 />
                 {selectedTagsMap[row.id] &&
                   selectedTagsMap[row.id].map((tag, index) => (
-                    <div key={index} className="flex-none inline-flex items-center px-2 mx-2 text-sm font-medium text-white-10 bg-blue-10 rounded">
+                    <div key={index} className="flex-none inline-flex items-center px-2 mx-2 text-sm font-medium text-white-10 py-4 bg-blue-10 rounded">
                       {tag}<LebelRemoveIcon />
                     </div>
                   ))}

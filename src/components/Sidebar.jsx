@@ -4,7 +4,7 @@ import { BaseLogoIcon  , MenuCloseIcon} from '../assets/icons';
 export default function Sidebar({ mobileMenuOpen, setMobileMenuOpen }) {
   return (
     <>
-      <div className='row-span-full bg-white-10 hidden tablet:flex flex-col items-center py-4 px-[10px] gap-4 text-black-100'>
+      <div className='row-span-full bg-white-10 hidden tablet:flex flex-col h-auto items-center py-4 px-[10px] gap-4 text-black-100 min-h-screen'>
         <div className='flex flex-col gap-6 items-center w-full grow'>
           <div className='flex gap-3 items-center w-[192px]'>
             <div className='w-12 h-12 rounded bg-black-100 overflow-hidden'>
