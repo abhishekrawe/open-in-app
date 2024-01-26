@@ -39,11 +39,11 @@ function DataUploads({ data }) {
             </div>
 
             {data.map((row, index) => (
-              <div key={index} className="flex md:bg-white-20 max-w-screen rounded-md text-base font-figtree mb-2 p-5 w-full ">
+              <div key={index} className="flex md:bg-white-20 max-w-screen rounded-md text-base font-figtree mb-2 p-2 w-full ">
                 <div className="flex-none font-medium text-gray-lightbulma me-4 p-2 pe-12 rounded">
                   {row.id}
                 </div>
-                <div className="flex-none text-blue-20 underline p-2 w-3/5 md:w-1/4 bg-white-20 rounded">
+                <div className=" whitespace-nowrap flex-none text-blue-20 underline p-2 w-3/5 md:w-1/4 bg-white-20 rounded">
                   {row.links}
                 </div>
                 <div className="flex-none font-figtree text-gray-lightbulma p-2 w-3/5 md:w-1/4 bg-white-20  rounded">
