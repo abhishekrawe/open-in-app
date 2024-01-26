@@ -3,12 +3,12 @@ import { ChevronDownIcon } from "../assets/icons";
 
 function TagSelector({ tags, value, onChange }) {
   return (
-    <div className='relative text-gray-drop py-3 px-2 rounded-lg bg-white-20'>
+    <div className='relative text-gray-drop py-3 px-2 rounded-tr-md rounded-br-md bg-white-20'>
      
       <select
         value={value}
         onChange={onChange}
-        className='appearance-none h-9 rounded border text-base cursor-pointer px-16 pr-20 outline-none bg-white-20'
+        className='appearance-none h-9 border rounded-md text-base cursor-pointer px-4 pr-10 outline-none bg-white-20'
       >
         <option value='default' className="text-black-10">Select Tags</option>
         {tags.map((tag, index) => (

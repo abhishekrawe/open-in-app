@@ -22,7 +22,7 @@ function DataUploads({ data }) {
 
   return (
     <>
-       <div className="p-0 md:p-4 mt-5">
+      <div className="p-0 md:p-4 mt-5">
         <div className='md:flex items-center '>
           <div className='text-black-10 text-2xl font-medium font-figtree leading-8 mb-5'>Uploads</div>
         </div>
@@ -43,10 +43,10 @@ function DataUploads({ data }) {
                 <div className="flex-none font-medium text-gray-lightbulma me-4 p-2 pe-12 rounded">
                   {row.id}
                 </div>
-                <div className=" whitespace-nowrap flex-none text-blue-20 underline p-2 px-5 w-3/5 md:w-1/4 bg-white-20 rounded">
+                <div className=" whitespace-nowrap flex-none text-blue-20 underline p-2 px-5 w-3/5 md:w-1/4 bg-white-20 rounded-tl-md rounded-bl-md">
                   {row.links}
                 </div>
-                <div className="flex-none font-figtree text-gray-lightbulma p-2 w-3/5 px-5 md:w-1/4 bg-white-20  rounded">
+                <div className="flex-none font-figtree text-gray-lightbulma p-2 w-3/5 px-5 md:w-1/4 bg-white-20">
                   {row.prefix}
                 </div>
 
@@ -66,10 +66,10 @@ function DataUploads({ data }) {
             ))}
           </div>
         </div>
-       </div>    
-    
+      </div>
+
     </>
   );
- }
+}
 
 export default DataUploads;
