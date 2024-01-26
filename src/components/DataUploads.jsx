@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { sampledata } from '../data/sample-data';
 import TagSelector from "../Popover/TagSlector"
 import { ChevronDownIcon, LebelRemoveIcon } from '../assets/icons';
 

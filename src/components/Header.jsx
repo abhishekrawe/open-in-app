@@ -18,7 +18,7 @@ export default function Header({ setMobileMenuOpen }) {
 
     const handleLogout = () => {
         localStorage.removeItem("email");
-        navigate('/signin');
+        navigate('/');
 
     }
     return (

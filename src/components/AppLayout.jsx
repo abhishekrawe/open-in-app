@@ -2,7 +2,7 @@ import { Outlet } from 'react-router-dom';
 import Sidebar from './Sidebar';
 import Header from './Header';
 import { useState } from 'react';
-import UploadHome from './UploadHome';
+import UploadCsv from './UploadCsv';
 
 export default function AppLayout() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -17,7 +17,7 @@ export default function AppLayout() {
 
             <main className='flex-1 p-4 tablet:p-8'>
                 <div className='mx-auto'>
-                    <UploadHome/>
+                    <UploadCsv/>
                 </div>
             </main>
         </div>

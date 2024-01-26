@@ -77,7 +77,7 @@ function Singin() {
     signInWithPopup(auth, provider).then((data) => {
       setValue(data.user.email)
       localStorage.setItem("email", data.user.email)
-      navigate("/uploadhome");
+      navigate("/uploadcsv");
     })
   }
 
