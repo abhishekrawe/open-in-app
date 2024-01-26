@@ -3,7 +3,7 @@ import { ChevronDownIcon } from "../assets/icons";
 
 function TagSelector({ tags, value, onChange }) {
   return (
-    <div className='relative text-gray-drop py-3 bg-white-20'>
+    <div className='relative text-gray-drop py-3 px-2 rounded-lg bg-white-20'>
      
       <select
         value={value}
