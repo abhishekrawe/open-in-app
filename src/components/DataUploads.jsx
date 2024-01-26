@@ -23,7 +23,7 @@ function DataUploads({ data }) {
   return (
     <>
        <div className="p-5">
-        <div className='md:flex items-center py-5 '>
+        <div className='md:flex items-center '>
           <div className='text-black-10 text-2xl font-medium font-figtree leading-8'>Uploads</div>
         </div>
 
@@ -43,22 +43,22 @@ function DataUploads({ data }) {
                 <div className="flex-none font-medium text-gray-lightbulma me-4 p-2 pe-12 rounded">
                   {row.id}
                 </div>
-                <div className="flex-none text-blue-20 underline p-2 w-3/5 md:w-1/4 bg-white-20 py-4 rounded">
+                <div className="flex-none text-blue-20 underline p-2 w-3/5 md:w-1/4 bg-white-20 rounded">
                   {row.links}
                 </div>
-                <div className="flex-none font-figtree text-gray-lightbulma p-2 w-3/5 md:w-1/4 bg-white-20 py-4  rounded">
+                <div className="flex-none font-figtree text-gray-lightbulma p-2 w-3/5 md:w-1/4 bg-white-20  rounded">
                   {row.prefix}
                 </div>
 
                 <TagSelector
+                  className="bg-white-20"
                   tags={row['select tags'].split(',').map((tag) => tag.trim())}
                   value={selectedTagsMap[row.id] || 'default'}
-                  className="bg-white-20 "
                   onChange={(event) => handleTagChange(event, row.id)}
                 />
                 {selectedTagsMap[row.id] &&
                   selectedTagsMap[row.id].map((tag, index) => (
-                    <div key={index} className="flex-none inline-flex items-center px-2 mx-2 text-sm font-medium text-white-10 py-4 bg-blue-10 rounded">
+                    <div key={index} className="flex-none inline-flex items-center px-2 mx-2 text-sm font-medium text-white-10 bg-blue-10 my-3 rounded">
                       {tag}<LebelRemoveIcon />
                     </div>
                   ))}
@@ -66,9 +66,7 @@ function DataUploads({ data }) {
             ))}
           </div>
         </div>
-       </div>
-       
-      
+       </div>    
     
     </>
   );
