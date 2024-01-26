@@ -1,103 +1,113 @@
 import React, { useRef, useState, useEffect } from "react";
-import { ExcelIcon, DocUploadIcon, SpinnerIcon } from "../assets/icons";
+import { ExcelIcon, DocUploadIcon } from "../assets/icons";
+import Papa from 'papaparse';
+import DataUploads from "./DataUploads";
 
 function UploadCsv() {
-    const fileInputRef = useRef(null);
-    const [selectedFile, setSelectedFile] = useState(null);
-    const [isLoading, setIsLoading] = useState(false);
-    const [isUploadComplete, setIsUploadComplete] = useState(false);
+  const fileInputRef = useRef(null);
+  const [data, setData] = useState([]);
+  const [selectedFile, setSelectedFile] = useState(null);
 
-    const handleFileUpload = (file) => {
-        setSelectedFile(file);
-        console.log("Uploading file:", file);
-    };
+  const handleFileUpload = (e) => {
+    const file = e?.target?.files[0];
+    if (file) {
+      setSelectedFile(file);
+      Papa.parse(file, {
+        header: true,
+        complete: (results) => {
+          setData(results.data);
+        },
+      });
+    }
+  };
 
-    const handleRemoveFile = () => {
-        setSelectedFile(null);
-        fileInputRef.current.value = null;
-    };
+  const renderTags = (tags) => {
+    if (!tags) return null;
 
-    const handleDrop = (e) => {
-        e.preventDefault();
-        const file = e.dataTransfer.files[0];
-        if (file) {
-            handleFileUpload(file);
-        }
-    };
-
-    const handleDragOver = (e) => {
-        e.preventDefault();
-    };
+    return tags.split(',').map((tag, tagIndex) => (
+      <span key={tagIndex}>{tag.trim()} </span>
+    ));
+  };
 
 
-    const handleOnClick = () => {
-        if (isLoading) return;
+  const handleRemoveFile = () => {
+    setSelectedFile(null);
+    fileInputRef.current.value = null;
+  };
 
-        setIsLoading(true);
-        setTimeout(() => {
-            setIsLoading(false);
-            setIsUploadComplete(true);
-        }, 1000);
-    };
+  const handleDrop = (e) => {
+    e.preventDefault();
+    const file = e.dataTransfer.files[0];
+    if (file) {
+      handleFileUpload(file);
+    }
+  };
 
-    return (
-        <>
-            <div className='visible md:invisible md:flex items-center pb-5 '>
-                <span className='text-black-10 text-2xl font-medium font-figtree leading-8'>Uploads CSV</span>
-            </div>
-            <div
-                className="flex justify-center items-center"
-                onDrop={handleDrop}
-                onDragOver={handleDragOver}
-            >
-                <div className="box-content h-auto w-full md:w-1/2 p-4 rounded-xl bg-white-20">
-                    <label
-                        htmlFor="fileInput"
-                        className="border-dashed border-2 h-60 text-gray-dashed rounded-xl flex flex-col justify-center items-center cursor-pointer"
-                    >
-                        <input
-                            type="file"
-                            id="fileInput"
-                            ref={fileInputRef}
-                            style={{ display: "none" }}
-                            onChange={(e) => handleFileUpload(e.target.files[0])}
-                        />
-                        <ExcelIcon />
-                        <h1 className="text-center">
-                            {selectedFile ? (
-                                <>
-                                    <span className="text-blue-10">{selectedFile.name}</span>
-                                    <p
-                                        className="text-red-remove cursor-pointer"
-                                        onClick={handleRemoveFile}
-                                    >
-                                        Remove
-                                    </p>
-                                </>
-                            ) : (
-                                <>
-                                    Drop your excel sheet here or{" "}
-                                    <span className="text-blue-10"> browse</span>
-                                </>
-                            )}
-                        </h1>
-                    </label>
-                    <div
-                        className={`justify-center gap-2 flex items-center rounded-md p-2 mt-3 text-white-10 bg-blue-10 cursor-pointer ${isUploadComplete ? "opacity-45" : ""}`}
-                        onClick={handleOnClick}
-                    >
-                        {isLoading ? (
-                            <SpinnerIcon />
-                        ) : (
-                            <DocUploadIcon />
-                        )}
-                        Upload
-                    </div>
-                </div>
-            </div>
-        </>
-       
-    );
+  const handleDragOver = (e) => {
+    e.preventDefault();
+  };
+
+  return (
+    <>
+
+      {/* 1st componensts */}
+      <div className='visible md:invisible md:flex items-center pb-5 '>
+        <span className='text-black-10 text-2xl font-medium font-figtree leading-8'>Uploads CSV</span>
+      </div>
+      <div
+        className="flex justify-center items-center" >
+        <div className="box-content h-auto w-full md:w-1/2 p-4 rounded-xl bg-white-20">
+          <label
+            htmlFor="fileInput"
+            className="border-dashed border-2 h-60 text-gray-dashed rounded-xl flex flex-col justify-center items-center cursor-pointer"
+            onDrop={handleDrop}
+            onDragOver={handleDragOver}
+          >
+            <input
+              type="file"
+              id="fileInput"
+              ref={fileInputRef}
+              style={{ display: "none" }}
+              accept=".csv"
+              onChange={(e) => handleFileUpload(e)}
+            />
+            <ExcelIcon />
+            <h1 className="text-center">
+              {selectedFile ? (
+                <>
+                  <span className="text-blue-10">{selectedFile.name}</span>
+                  <p
+                    className="text-red-remove cursor-pointer"
+                    onClick={handleRemoveFile}
+                  >
+                    Remove
+                  </p>
+                </>
+              ) : (
+                <>
+                  Drop your excel sheet here or{" "}
+                  <span className="text-blue-10"> browse</span>
+                </>
+              )}
+            </h1>
+          </label>
+          <div
+            className={`justify-center gap-2 flex items-center rounded-md p-2 mt-3 text-white-10 bg-blue-10 cursor-pointer }`}
+          >
+            <DocUploadIcon />
+            Upload
+          </div>
+        </div>
+
+      </div>
+
+
+      {/* <2nd component /> */}
+
+      <DataUploads data={data} />
+    </>
+
+  );
 }
 
 export default UploadCsv;
