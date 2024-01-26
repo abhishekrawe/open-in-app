@@ -22,16 +22,16 @@ function DataUploads({ data }) {
 
   return (
     <>
-       <div className="p-0 md:p-4">
+       <div className="p-0 md:p-4 mt-5">
         <div className='md:flex items-center '>
-          <div className='text-black-10 text-2xl font-medium font-figtree leading-8'>Uploads</div>
+          <div className='text-black-10 text-2xl font-medium font-figtree leading-8 mb-5'>Uploads</div>
         </div>
 
         <div className="bg-white-30 p-4 rounded-lg">
           <div className="overflow-x-auto">
             <div className="flex rounded-md text-base font-figtree mb-2 p-3">
               {columns.map((column, index) => (
-                <div key={index} className={`flex-none font-medium text-gray-lightbulma p-2 ${index === 0 ? 'pe-12' : ''} ${index === 0 ? '' : 'w-3/5 md:w-1/4 me-4 '}`}>
+                <div key={index} className={`flex-none font-medium text-gray-lightbulma p-2 px-3 ${index === 0 ? 'pe-12' : ''} ${index === 0 ? '' : 'w-3/5 md:w-1/4 me-4 '}`}>
                   {column}
                 </div>
               ))}
@@ -43,10 +43,10 @@ function DataUploads({ data }) {
                 <div className="flex-none font-medium text-gray-lightbulma me-4 p-2 pe-12 rounded">
                   {row.id}
                 </div>
-                <div className=" whitespace-nowrap flex-none text-blue-20 underline p-2 w-3/5 md:w-1/4 bg-white-20 rounded">
+                <div className=" whitespace-nowrap flex-none text-blue-20 underline p-2 px-5 w-3/5 md:w-1/4 bg-white-20 rounded">
                   {row.links}
                 </div>
-                <div className="flex-none font-figtree text-gray-lightbulma p-2 w-3/5 md:w-1/4 bg-white-20  rounded">
+                <div className="flex-none font-figtree text-gray-lightbulma p-2 w-3/5 px-5 md:w-1/4 bg-white-20  rounded">
                   {row.prefix}
                 </div>
 
