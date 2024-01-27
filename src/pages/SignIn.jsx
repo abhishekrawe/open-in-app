@@ -113,11 +113,11 @@ function Singin() {
         </div>
 
         {/* Quick Sign In */}
-        <div className="flex  mt-3 gap-2 md:gap-10 ml-6 md:ml-0">
+        <div className="flex  mt-3 gap-2 md:gap-4 ml-6 md:ml-0">
           <div>
             <button
               type="button"
-              className="flex items-center font-montserrat bg-white-20 justify-center text-gray-signintext px-4 md:px-10 py-3 text-xs rounded-lg gap-2"
+              className="flex items-center font-montserrat bg-white-20 justify-center text-gray-signintext px-4 md:px-8 py-3 text-xs rounded-lg gap-2"
               onClick={handleClick}
             >
               <GoogleIcon className="mr-2 text-center w-5 h-5" />
@@ -126,7 +126,7 @@ function Singin() {
           </div>
           <button
             type="button"
-            className="flex  font-montserrat font-light items-center bg-white px-4 md:px-10 py-3 text-xs bg-white-20 rounded-lg gap-2"
+            className="flex  font-montserrat font-light items-center bg-white px-4 md:px-8 py-3 text-xs bg-white-20 rounded-lg gap-2"
           >
             <AppleIcon className="mr-2 text-center w-5 h-5" />
             <h1 className="text-[#858585]  whitespace-nowrap">Sign in with Apple</h1>
