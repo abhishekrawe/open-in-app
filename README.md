@@ -34,6 +34,20 @@ https://github.com/abhishekrawe/open-in-app/assets/65603830/65fae7d2-0d21-410e-b
 </p>
 
 
+
+## 💎Important Concepts .
+
+- Usage of custom icon components for UI elements, enhancing reusability and consistency.
+- Integration of Tailwind CSS for styling, providing a responsive and visually appealing design.
+- Effective use of React hooks, such as `useState` and `useEffect`, for state management.
+- Conditional rendering is implemented based on certain conditions
+- `props` and `state` is utilized to pass data between components and manage local component state.
+- `localStorage` to store and retrieve data locally, preserving user login information.
+- Implementation of `Firebase` authentication for signing in.
+- `React Router` is used for navigation between different pages in the application.
+- Utilization of `Tailwind CSS` for responsive design, with screen size breakpoints.
+
+
 ## 💜 Tech Stack .
 - [x] React JS
 - [x] Tailwind CSS
@@ -48,7 +62,7 @@ https://github.com/abhishekrawe/open-in-app/assets/65603830/65fae7d2-0d21-410e-b
 - ⬇️ Firesebase -  https://firebase.google.com/docs/auth
 - ⬇️ PapaParse - https://www.npmjs.com/package/papaparse
 
-
+📩 Mail me : abhi953434@gmail.com
 
 
 
