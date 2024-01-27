@@ -1,5 +1,5 @@
 
-# ❄️ Open in App Assignmnet 
+# ❄️ Open in App Frontend Assignmnet 
 
 
 ## 🚀 Deployed App
@@ -10,37 +10,28 @@ Access the deployed app at [https://candid-sprite-c800d2.netlify.app/](https://c
 - ⬇️ For Running this repository on a local 
 - ⬇️ Frontend - cd to open-in-app  > npm install > npm run dev
  
+## 🎉 Features
 
+- Sign in using your Google account.
+- Upon successful sign-in, you will be redirected to a dashboard page.
+- Select a .CSV file by either browsing for it or dragging and dropping it into the specified input area. [CSV File - Try to input this ](https://drive.google.com/file/d/1k1gbCAvHCGlz3WpsX8S3XoLWcjgFBOQH/view)
+- The chosen file's name will be shown in the input component.
+- Click the upload button, initiating a loading spinner. 
+- After a successful upload, the CSV file will be rendered, and the entire component will be displayed according to the structure defined in the CSV file.
 
 ## 🃏 Glimse of Project ⏬
 
 ### `video ` 
 
-https://github.com/abhishekrawe/open-in-app/assets/65603830/cc7ae4e1-6624-4538-ad90-be45f4effbeb
+https://github.com/abhishekrawe/open-in-app/assets/65603830/65fae7d2-0d21-410e-b550-82cc1de15c32
 
-### `pictures`
+### `Responisve`
 
 <p float="left">
-  <img src="https://github.com/abhishekrawe/open-in-app/assets/65603830/22d9bf03-270b-4e0a-9c27-b4f4dea0dded" width="220" />
-  <img src="https://github.com/abhishekrawe/open-in-app/assets/65603830/39e8e59a-b7f3-4103-96bb-f1009c643002" width="220" /> 
-  <img src="https://github.com/abhishekrawe/open-in-app/assets/65603830/06e06c3e-457d-4d65-843c-221c59e55e78" width="220" />
-  <img src="https://github.com/abhishekrawe/open-in-app/assets/65603830/5b3aa732-f83f-4b28-be65-911efc172a7d" width="220" />
+  <img src="https://github.com/abhishekrawe/open-in-app/assets/65603830/950d4757-fc57-46c5-9a74-c8a874962de0" width="220" />
+  <img src="https://github.com/abhishekrawe/open-in-app/assets/65603830/cfe2977d-e7c3-42a4-9a2c-fe3c22d0b6a6" width="220" /> 
+  <img src="https://github.com/abhishekrawe/open-in-app/assets/65603830/980803e4-fc18-4553-83d4-c7a9d3225adc" width="220" />
 </p>
-
-![image](https://github.com/abhishekrawe/open-in-app/assets/65603830/795ada9c-a370-45d4-a9f6-261a1ee3b04f)
-![image](https://github.com/abhishekrawe/open-in-app/assets/65603830/fc87dfe2-ecb0-4203-b66d-9e7ef9874aa4)
-![image](https://github.com/abhishekrawe/open-in-app/assets/65603830/ded35a84-b7d9-4307-ad32-641197a35b56)
-![image](https://github.com/abhishekrawe/open-in-app/assets/65603830/36fe2ad5-54b7-4852-a2f1-3a3cdf8f1c96)
-
-
-
-## 🎉 Features
-
-- You can sign in with Google 
-- After Succefully sign in it will redirected to you a dashboard page.
-- You can select the .CSV file by Browse input , by Drag and Drop the File also.
-- It will show the files name on the input structure.
-- When you click on upload button , then the document .csv file ,then it render the whole component according to there structure in the csv file.
 
 
 ## 💜 Tech Stack .
@@ -48,7 +39,7 @@ https://github.com/abhishekrawe/open-in-app/assets/65603830/cc7ae4e1-6624-4538-a
 - [x] Tailwind CSS
 - [x] Firebase
 - [x] Papaparse Library for parsign the csv .
-- [x] React router dom - useParams().
+- [x] React router dom .
 
 
 ## 📃 Documentation - 
@@ -56,4 +47,9 @@ https://github.com/abhishekrawe/open-in-app/assets/65603830/cc7ae4e1-6624-4538-a
 - ⬇️ Tailwind CSS - https://tailwindcss.com/docs/
 - ⬇️ Firesebase -  https://firebase.google.com/docs/auth
 - ⬇️ PapaParse - https://www.npmjs.com/package/papaparse
+
+
+
+
+
 
